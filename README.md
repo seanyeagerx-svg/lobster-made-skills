@@ -1,6 +1,10 @@
-# 龙虾工作流 Skill
+# 小龙虾自己做的 Skills
 
 从实际协作问题整理出的 OpenClaw 工作流封装。目前公开 **14 项审阅版**，另有 4 项暂缓，不把已知问题带进运行目录。
+
+[下载 14 项合集 ZIP](https://github.com/seanyeagerx-svg/lobster-made-skills/releases/download/v0.2.0-review/lobster-made-skills-v0.2.0-review.zip) · [版本与校验文件](https://github.com/seanyeagerx-svg/lobster-made-skills/releases/tag/v0.2.0-review)
+
+下载包把全部已公开 Skill 放在同一个 `skills/` 目录，附安装说明、审查记录和合成测试。名称指我们与小龙虾在项目中编写和迭代的封装；外部方法与平台文档仍按各项注明的出处署源。
 
 ## 怎么选
 
