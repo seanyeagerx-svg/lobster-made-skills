@@ -1,6 +1,6 @@
 # 龙虾工作流 Skill
 
-从实际协作问题整理出的 OpenClaw 工作流封装。首批公开 **10 项审阅版**，另有 8 项暂缓，不把已知问题带进运行目录。
+从实际协作问题整理出的 OpenClaw 工作流封装。目前公开 **14 项审阅版**，另有 4 项暂缓，不把已知问题带进运行目录。
 
 ## 怎么选
 
@@ -13,15 +13,15 @@
 | feishu-turn-recovery | 飞书漏答恢复 | 公开审阅版 |
 | gateway-tailscale-access | 网关接入核查 | 公开审阅版 |
 | github-device-login | GitHub 设备登录 | 公开审阅版 |
-| gmail-imap-integration | Gmail IMAP 接入 | 暂缓 |
-| meyo-api | meyo API | 暂缓 |
+| gmail-imap-integration | Gmail IMAP 接入 | 公开审阅版 |
+| meyo-api | meyo API | 公开审阅版 |
 | multi-model-comparison | 多模型对比 | 公开审阅版 |
-| musk-algorithm | 五步流程审查 | 暂缓 |
+| musk-algorithm | 五步流程审查 | 公开审阅版 |
 | one-sentence-craft | 一句话工序 | 暂缓 |
 | openclaw-command-cron | 定时任务核查 | 公开审阅版 |
 | openclaw-image-gen | 图片生成核验 | 公开审阅版 |
 | openclaw-model-provider-setup | 模型接入 | 暂缓 |
-| session-transcript-recovery | 会话原文恢复 | 暂缓 |
+| session-transcript-recovery | 会话原文恢复 | 公开审阅版 |
 | webchat-file-delivery | WebChat 文件交付 | 公开审阅版 |
 | webpage-visual-review | 网页视觉检查 | 公开审阅版 |
 
@@ -47,6 +47,16 @@ OpenClaw 安装位置和优先级以[当前 Skills 文档](https://docs.openclaw
 
 本轮未实际发送飞书消息、接入邮箱、创建定时任务、生成计费图片、重启网关或修改网络。
 
+## 检查
+
+Python 3.10+ 标准库，无需额外依赖。在仓库目录运行：
+
+```shell
+python -m unittest discover -s tests -v
+```
+
+测试使用合成凭据、网络替身和临时数据库，不调用真实账号。三个随包脚本分别用于 meyo JSON 请求、Gmail 候选配置检查和单会话快照导出；请先读对应 SKILL.md。
+
 ## 许可
 
-本仓库的项目流程文本使用 [MIT](LICENSE)。OpenClaw、GitHub、Tailscale 等外部平台及其文档仍适用各自条款；这里不是它们的官方 Skill，也不声称底层方法或平台能力由本项目发明。
+本仓库的项目流程文本与辅助代码使用 [MIT](LICENSE)。OpenClaw、GitHub、Tailscale 等外部平台及其文档仍适用各自条款；这里不是它们的官方 Skill，也不声称底层方法或平台能力由本项目发明。
